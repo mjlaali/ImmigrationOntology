@@ -18,6 +18,90 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship">
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LanguageAbilitiesForCitizenship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LanguageAbilitiesForCitizenship">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel4"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NCLCLevel4"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LanguageQuilified"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LiveInCanada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LiveInCanada">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Other"/>
+        <rdfs:comment>You must have resided in Canada for at least three years (1,095 days) in the past four years before you apply. This does not apply to children under 18.
+
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LanguageAbilitiesForCitizenship"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LiveInCanada"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Adult"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Child"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasParent"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance">
+        <rdfs:comment>You not clear if:
+have been convicted of an indictable (criminal) offence or an offence under the Citizenship Act in the three years before you apply,
+are currently charged with an offence under the Citizenship Act,
+are in prison, on parole or on probation,
+are under a removal order (Canadian officials have ordered you to leave Canada),
+are being investigated for, are charged with, or have been convicted of a war crime or a crime against humanity, or
+have had your Canadian citizenship taken away in the past five years.</rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 
