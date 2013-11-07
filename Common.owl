@@ -15,7 +15,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
     
 
 
@@ -30,11 +30,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#hasCompany -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasCompany -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#hasCompany">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Person"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Person"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasCompany">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
     </owl:ObjectProperty>
     
 
@@ -50,244 +50,252 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Adult -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Adult -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Adult">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Adult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Child -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Child -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Child">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Child">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#China -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#China -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#China">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CountryNeedMedical"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#China">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryNeedMedical"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Clearance -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Clearance">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedPerson"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Company -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Company -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Company">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedPerson"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Company">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Country -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Country -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Country">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CountryNeedMedical -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryNeedMedical -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CountryNeedMedical">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Country"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryNeedMedical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Country"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CountryWithoutMedical -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryWithoutMedical -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CountryWithoutMedical">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Country"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryWithoutMedical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Country"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#English -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#English -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#English">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedForLanguage"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#English">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForLanguage"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#French -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#French -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#French">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedForLanguage"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#French">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForLanguage"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Germany -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Germany -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Germany">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CountryWithoutMedical"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Germany">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryWithoutMedical"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#HaveOffer -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#HaveOffer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#HaveOffer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedPerson"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#HaveOffer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Healthy -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Healthy -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Healthy">
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Healthy">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CountryWithoutMedical"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryWithoutMedical"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CountryNeedMedical"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#MedicalTest"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryNeedMedical"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#MedicalTest"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedPerson"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#IELTS -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#IELTS -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#IELTS">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Test"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#IELTS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Test"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#India -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#India -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#India">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CountryNeedMedical"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#India">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryNeedMedical"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Iran -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Iran -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Iran">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CountryWithoutMedical"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Iran">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryWithoutMedical"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#LivinExpenses -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LivinExpenses -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#LivinExpenses">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedForFinance"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LivinExpenses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#MedicalTest -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#MedicalTest -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#MedicalTest">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Test"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#MedicalTest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Test"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Person -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedForFinance -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedForFinance">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedPerson"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedForLanguage -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForLanguage -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedForLanguage">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedPerson"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedForProvince -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForProvince -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedForProvince">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedPerson"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForProvince">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedPerson -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedPerson">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#StudyPermit -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#StudyPermit">
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#StudyPermit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#StudyPermit">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Clearance"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#HaveOffer"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Healthy"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#HaveOffer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Healthy"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#LivinExpenses"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#TuitionFee"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LivinExpenses"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#TuitionFee"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedPerson"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Test -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Test -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Test">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Test">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#TuitionFee -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#TuitionFee -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#TuitionFee">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#QualifiedForFinance"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#TuitionFee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#VisaEnglish -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#VisaEnglish -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#VisaEnglish">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#English"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#VisaEnglish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#English"/>
     </owl:Class>
     
 
@@ -303,17 +311,17 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Jack -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Jack -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Jack">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Jack">
         <rdf:type>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Clearance"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#HaveOffer"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#Healthy"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#LivinExpenses"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#TuitionFee"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#HaveOffer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Healthy"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LivinExpenses"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#TuitionFee"/>
                 </owl:intersectionOf>
             </owl:Class>
         </rdf:type>
