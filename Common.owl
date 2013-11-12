@@ -71,7 +71,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CELPIP2_2_2_2">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CELPIPGeneral"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel4"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBEngLevel4"/>
     </owl:Class>
     
 
@@ -87,8 +87,34 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLB -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLB">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LanguageTest"/>
+        <rdfs:comment>http://www.cic.gc.ca/english/immigrate/skilled/language-testing.asp
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBEng -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBEng">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#EnglishTest"/>
         <rdfs:comment>The Canadian Language Benchmarks</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBEngLevel4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBEngLevel4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBEng"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBFrench -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBFrench">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#FrenchTest"/>
     </owl:Class>
     
 
@@ -97,6 +123,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel4">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLB"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel7 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel7">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel4"/>
     </owl:Class>
     
 
@@ -229,7 +263,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#IELTS4.5_3.5_4_4 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#IELTS4.5_3.5_4_4">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel4"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBEngLevel4"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#IELTS"/>
     </owl:Class>
     
