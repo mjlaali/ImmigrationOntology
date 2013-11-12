@@ -4,8 +4,9 @@
     <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test" uri="Common.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test" uri="Common.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1384268619918" name="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship" uri="Citizenship.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1384268619918" name="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR" uri="PR.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1384268619918" name="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test" uri="Common.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1384269647078" name="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All" uri="All.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1384269647078" name="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship" uri="Citizenship.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1384269647078" name="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR" uri="PR.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1384269647078" name="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test" uri="Common.owl"/>
     </group>
 </catalog>
