@@ -355,6 +355,7 @@
                     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#HaveOffer"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Healthy"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#TiesToHomeCountry"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LivinExpenses"/>
@@ -399,6 +400,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#TuitionFee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#TiesToHomeCountry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#TiesToHomeCountry"/>
     
 
 
