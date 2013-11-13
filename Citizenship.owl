@@ -32,9 +32,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasParent -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasParent"/>
     
 
 
@@ -181,9 +178,9 @@ http://www.cic.gc.ca/english/immigrate/skilled/apply-who-instructions.asp?expand
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Adult -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Adult"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult"/>
     
 
 
@@ -193,9 +190,9 @@ http://www.cic.gc.ca/english/immigrate/skilled/apply-who-instructions.asp?expand
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Child -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Child"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child"/>
     
 
 
@@ -209,17 +206,17 @@ http://www.cic.gc.ca/english/immigrate/skilled/apply-who-instructions.asp?expand
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LanguageAbilitiesForCitizenship"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LiveInCanada"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Adult"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Child"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child"/>
                             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasParent"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasParent"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship"/>
                             </owl:Restriction>
                         </owl:intersectionOf>

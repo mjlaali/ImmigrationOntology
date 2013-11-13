@@ -15,7 +15,9 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common">
+        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person"/>
+    </owl:Ontology>
     
 
 
@@ -33,17 +35,8 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasCompany -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasCompany">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasParent -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasParent">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Adult"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Child"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
     </owl:ObjectProperty>
     
 
@@ -56,14 +49,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Adult -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Adult">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
-    </owl:Class>
     
 
 
@@ -135,14 +120,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Child -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Child">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#China -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#China">
@@ -178,7 +155,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Country -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Country">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
     </owl:Class>
     
 
@@ -350,12 +327,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance">
@@ -367,7 +338,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
     </owl:Class>
     
 
@@ -375,7 +346,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
     </owl:Class>
     
 
@@ -424,7 +395,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Test -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Test">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
     </owl:Class>
     
 
@@ -434,6 +405,28 @@
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#TuitionFee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
     
 
 

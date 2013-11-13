@@ -19,6 +19,7 @@
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit"/>
     </owl:Ontology>
 </rdf:RDF>
 
