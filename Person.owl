@@ -129,10 +129,10 @@
                                 <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
-                                        <xsd:minExclusive rdf:datatype="&xsd;integer">0</xsd:minExclusive>
+                                        <xsd:maxExclusive rdf:datatype="&xsd;integer">18</xsd:maxExclusive>
                                     </rdf:Description>
                                     <rdf:Description>
-                                        <xsd:maxExclusive rdf:datatype="&xsd;integer">18</xsd:maxExclusive>
+                                        <xsd:minExclusive rdf:datatype="&xsd;integer">0</xsd:minExclusive>
                                     </rdf:Description>
                                 </owl:withRestrictions>
                             </rdfs:Datatype>
