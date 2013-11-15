@@ -15,7 +15,9 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person">
+        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country"/>
+    </owl:Ontology>
     
 
 
@@ -30,11 +32,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#citizenOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#citizenOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasChild -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasChild">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasLocation">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country_"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#ResidenceInfo"/>
     </owl:ObjectProperty>
     
 
@@ -50,8 +69,18 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#isMarriedTo -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#isMarriedTo">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#liveIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#liveIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#ResidenceInfo"/>
     </owl:ObjectProperty>
     
 
@@ -71,6 +100,17 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasAge">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasLength">
+        <rdfs:comment>Number of day that a person live in a location
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#ResidenceInfo"/>
         <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
     </owl:DatatypeProperty>
     
@@ -149,6 +189,62 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#ResidenceInfo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#ResidenceInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Canada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Canada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country_"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#LiveInCanada1Y -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#LiveInCanada1Y">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#ResidenceInfo"/>
+        <hasLength rdf:datatype="&xsd;nonNegativeInteger">365</hasLength>
+        <hasLocation rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Canada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <hasAge rdf:datatype="&xsd;nonNegativeInteger">26</hasAge>
+        <liveIn rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <hasAge rdf:datatype="&xsd;nonNegativeInteger">29</hasAge>
+        <liveIn rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran"/>
+        <isMarriedTo rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

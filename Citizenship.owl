@@ -24,163 +24,11 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#ECA -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#ECA">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWRequirment"/>
-        <rdfs:comment>include either a completed Canadian educational credential or a completed foreign educational credential with an Educational Credential Assessment (ECA) from an approved organization, 
-http://www.cic.gc.ca/english/immigrate/skilled/apply-who-instructions.asp?expand=arranged#arranged
-</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSW -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSW">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#ECA"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWLanguageRequirment"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#OneYearWorkExperiment"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWBasicRequirment"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#HaveOfferForEmployment"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#PhDStudent"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
-        <rdfs:comment>Federal skilled workers (FSW) </rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWBasicRequirment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWBasicRequirment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWRequirment"/>
-        <rdfs:comment>have one year of continuous full-time (or an equal amount of continuous part-time) paid work experience
-in one of the eligible occupations within the last ten years, 
-http://www.cic.gc.ca/english/immigrate/skilled/apply-who-instructions.asp?expand=arranged#arranged</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWLanguageRequirment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWLanguageRequirment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWRequirment"/>
-        <rdfs:comment>include the results of your official language test showing that you meet the minimum language threshold (Canadian Language Benchmark 7) in all four language skill areas (speaking, listening, reading and writing) when you apply,</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWRequirment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWRequirment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#HaveOfferForEmployment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#HaveOfferForEmployment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWRequirment"/>
-        <rdfs:comment>have a valid offer of arranged employment, 
-http://www.cic.gc.ca/english/immigrate/skilled/apply-who-instructions.asp?expand=arranged#arranged</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LanguageAbilitiesForCitizenship -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LanguageAbilitiesForCitizenship">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel4"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NCLCLevel4"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LanguageQuilified"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LiveInCanada -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LiveInCanada">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Other"/>
-        <rdfs:comment>You must have resided in Canada for at least three years (1,095 days) in the past four years before you apply. This does not apply to children under 18.
-
-</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#OneYearWorkExperiment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#OneYearWorkExperiment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWRequirment"/>
-        <rdfs:comment>have at least one year of continuous full-time (or an equal amount in continuous part-time) paid work experience within the last ten years in the primary occupation you state in your application.
-http://www.cic.gc.ca/english/immigrate/skilled/apply-who-instructions.asp?expand=arranged#arranged
-</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#PhDStudent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#PhDStudent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#FSWRequirment"/>
-        <rdfs:comment>You must be either:
-
-an international student enrolled in a PhD program in Canada who:
-has finished at least two years of study toward a PhD,
-is in good academic standing at the time you apply, and
-did not get an award that requires you to return to your home country to apply your knowledge and skills.
-OR
-
-a graduate of a PhD program in Canada who:
-graduated no more than 12 months before the date we get your application, and
-did not get an award which required you to return to your home country to apply your knowledge and skills (or did, but have already met the terms of the award).
-http://www.cic.gc.ca/english/immigrate/skilled/apply-who-instructions.asp?expand=phd#phd</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult"/>
     
 
 
@@ -190,45 +38,43 @@ http://www.cic.gc.ca/english/immigrate/skilled/apply-who-instructions.asp?expand
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NCLCLevel4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NCLCLevel4"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult"/>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child"/>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LanguageAbilitiesForCitizenship"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#LiveInCanada"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasParent"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance">
         <rdfs:comment>You not clear if:
@@ -239,36 +85,6 @@ are under a removal order (Canadian officials have ordered you to leave Canada),
 are being investigated for, are charged with, or have been convicted of a war crime or a crime against humanity, or
 have had your Canadian citizenship taken away in the past five years.</rdfs:comment>
     </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LanguageQuilified -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LanguageQuilified"/>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NCLCLevel4 -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NCLCLevel4"/>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Other -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Other"/>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson"/>
 </rdf:RDF>
 
 

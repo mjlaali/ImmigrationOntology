@@ -15,7 +15,9 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR">
+        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
+    </owl:Ontology>
     
 
 
@@ -30,16 +32,26 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EconomicImmigrants -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EconomicImmigrants">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FSW -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FSW">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EconomicImmigrants"/>
+        <rdfs:comment>Federal skilled workers (FSW) are chosen as permanent residents based on their ability to settle in Canada and take part in our economy. We assess them on their:
+
+English and/or French skills,
+education,
+work experience, and
+other factors that have been shown to help them prosper in Canada.
+The rules to apply as an FSW can change from time to time without notice. Make sure you keep checking this site if you want to immigrate to Canada as an FSW.
+http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
     </owl:Class>
     
 
@@ -47,15 +59,23 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FamilyClass -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FamilyClass">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#Other -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#OtherPR -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#Other">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#OtherPR">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status"/>
     </owl:Class>
     
 
@@ -63,7 +83,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#Refugees -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#Refugees">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#PermanentResident"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR"/>
     </owl:Class>
 </rdf:RDF>
 
