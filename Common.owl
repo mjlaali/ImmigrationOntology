@@ -349,7 +349,6 @@
                     <rdf:Description rdf:about="&Common;Clearance"/>
                     <rdf:Description rdf:about="&Common;HaveOffer"/>
                     <rdf:Description rdf:about="&Common;Healthy"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#TiesToHomeCountry"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&Common;LivinExpenses"/>
@@ -416,12 +415,6 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
-    
-
-
-    <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#TiesToHomeCountry -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#TiesToHomeCountry"/>
     
 
 
