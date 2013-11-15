@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Person "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#"
+     xml:base="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Person="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity">
+        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#activityLocation -->
+
+    <owl:ObjectProperty rdf:about="&Person;activityLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#didActivity -->
+
+    <owl:ObjectProperty rdf:about="&Person;didActivity">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+        <rdfs:domain rdf:resource="&Person;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#WorkExperience"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#activityLength -->
+
+    <owl:DatatypeProperty rdf:about="&Person;activityLength">
+        <rdfs:comment>Number of day that a person live in a location
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#WorkExperience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#WorkExperience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Living -->
+
+    <owl:Class rdf:about="&Person;Living">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#ProgrammingWorkExperience -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#ProgrammingWorkExperience">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#WorkExperience"/>
+        <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">400</Person:activityLength>
+        <hasSkillLevel rdf:datatype="&xsd;string">A</hasSkillLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#LiveInCanada1Y -->
+
+    <rdf:Description rdf:about="&Person;LiveInCanada1Y">
+        <rdf:type rdf:resource="&Person;Living"/>
+        <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">365</Person:activityLength>
+        <Person:activityLocation rdf:resource="&Person;Canada"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara -->
+
+    <rdf:Description rdf:about="&Person;Sara">
+        <Person:didActivity rdf:resource="&Person;LiveInCanada1Y"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina -->
+
+    <rdf:Description rdf:about="&Person;Sina">
+        <Person:didActivity rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#ProgrammingWorkExperience"/>
+        <Person:didActivity rdf:resource="&Person;LiveInCanada1Y"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

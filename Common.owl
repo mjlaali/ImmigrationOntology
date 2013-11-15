@@ -18,6 +18,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:Common="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common">
+        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test"/>
     </owl:Ontology>
@@ -456,6 +457,14 @@
         <readingScore rdf:datatype="&xsd;decimal">7</readingScore>
         <speakingScore rdf:datatype="&xsd;decimal">7</speakingScore>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara">
+        <Common:tookATest rdf:resource="&Common;SaraIELTSTest"/>
+    </rdf:Description>
     
 
 

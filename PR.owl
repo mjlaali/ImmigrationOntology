@@ -43,6 +43,47 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FSW -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FSW">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#didActivity"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#WorkExperience"/>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel"/>
+                                        <owl:hasValue rdf:datatype="&xsd;string">0</owl:hasValue>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel"/>
+                                        <owl:hasValue rdf:datatype="&xsd;string">A</owl:hasValue>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel"/>
+                                        <owl:hasValue rdf:datatype="&xsd;string">B</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#activityLength"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minExclusive rdf:datatype="&xsd;integer">365</xsd:minExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EconomicImmigrants"/>
         <rdfs:comment>Federal skilled workers (FSW) are chosen as permanent residents based on their ability to settle in Canada and take part in our economy. We assess them on their:
 

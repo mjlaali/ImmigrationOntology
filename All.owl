@@ -16,6 +16,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All">
+        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR"/>
