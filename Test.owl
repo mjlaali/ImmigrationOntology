@@ -101,7 +101,7 @@
                                         <owl:onDatatype rdf:resource="&xsd;decimal"/>
                                         <owl:withRestrictions rdf:parseType="Collection">
                                             <rdf:Description>
-                                                <xsd:minInclusive rdf:datatype="&xsd;integer">4</xsd:minInclusive>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">4.0</xsd:minInclusive>
                                             </rdf:Description>
                                         </owl:withRestrictions>
                                     </rdfs:Datatype>
@@ -114,7 +114,7 @@
                                         <owl:onDatatype rdf:resource="&xsd;decimal"/>
                                         <owl:withRestrictions rdf:parseType="Collection">
                                             <rdf:Description>
-                                                <xsd:minInclusive rdf:datatype="&xsd;integer">4</xsd:minInclusive>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">4.0</xsd:minInclusive>
                                             </rdf:Description>
                                         </owl:withRestrictions>
                                     </rdfs:Datatype>
@@ -127,7 +127,7 @@
                                         <owl:onDatatype rdf:resource="&xsd;decimal"/>
                                         <owl:withRestrictions rdf:parseType="Collection">
                                             <rdf:Description>
-                                                <xsd:minInclusive rdf:datatype="&xsd;integer">4</xsd:minInclusive>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">4.0</xsd:minInclusive>
                                             </rdf:Description>
                                         </owl:withRestrictions>
                                     </rdfs:Datatype>
@@ -140,7 +140,7 @@
                                         <owl:onDatatype rdf:resource="&xsd;decimal"/>
                                         <owl:withRestrictions rdf:parseType="Collection">
                                             <rdf:Description>
-                                                <xsd:minInclusive rdf:datatype="&xsd;integer">4</xsd:minInclusive>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">4.0</xsd:minInclusive>
                                             </rdf:Description>
                                         </owl:withRestrictions>
                                     </rdfs:Datatype>
@@ -215,7 +215,7 @@
                                         <owl:onDatatype rdf:resource="&xsd;decimal"/>
                                         <owl:withRestrictions rdf:parseType="Collection">
                                             <rdf:Description>
-                                                <xsd:minInclusive rdf:datatype="&xsd;integer">248</xsd:minInclusive>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">248.0</xsd:minInclusive>
                                             </rdf:Description>
                                         </owl:withRestrictions>
                                     </rdfs:Datatype>
@@ -228,7 +228,7 @@
                                         <owl:onDatatype rdf:resource="&xsd;decimal"/>
                                         <owl:withRestrictions rdf:parseType="Collection">
                                             <rdf:Description>
-                                                <xsd:minInclusive rdf:datatype="&xsd;integer">309</xsd:minInclusive>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">309.0</xsd:minInclusive>
                                             </rdf:Description>
                                         </owl:withRestrictions>
                                     </rdfs:Datatype>
@@ -241,7 +241,7 @@
                                         <owl:onDatatype rdf:resource="&xsd;decimal"/>
                                         <owl:withRestrictions rdf:parseType="Collection">
                                             <rdf:Description>
-                                                <xsd:minInclusive rdf:datatype="&xsd;integer">309</xsd:minInclusive>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">309.0</xsd:minInclusive>
                                             </rdf:Description>
                                         </owl:withRestrictions>
                                     </rdfs:Datatype>
@@ -254,7 +254,7 @@
                                         <owl:onDatatype rdf:resource="&xsd;decimal"/>
                                         <owl:withRestrictions rdf:parseType="Collection">
                                             <rdf:Description>
-                                                <xsd:minInclusive rdf:datatype="&xsd;integer">206</xsd:minInclusive>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">206.0</xsd:minInclusive>
                                             </rdf:Description>
                                         </owl:withRestrictions>
                                     </rdfs:Datatype>

@@ -429,9 +429,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#SaraIELTSTest -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#ELTSTest6565_5 -->
 
-    <owl:NamedIndividual rdf:about="&Common;SaraIELTSTest">
+    <owl:NamedIndividual rdf:about="&Common;ELTSTest6565_5">
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#IELTS"/>
         <speakingScore rdf:datatype="&xsd;decimal">5</speakingScore>
         <writingScore rdf:datatype="&xsd;decimal">5</writingScore>
@@ -441,14 +441,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#SinaIELTSTest -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#IELTSTest7777 -->
 
-    <owl:NamedIndividual rdf:about="&Common;SinaIELTSTest">
+    <owl:NamedIndividual rdf:about="&Common;IELTSTest7777">
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#IELTS"/>
-        <listeningScore rdf:datatype="&xsd;decimal">7</listeningScore>
         <writingScore rdf:datatype="&xsd;decimal">7</writingScore>
-        <readingScore rdf:datatype="&xsd;decimal">7</readingScore>
+        <listeningScore rdf:datatype="&xsd;decimal">7</listeningScore>
         <speakingScore rdf:datatype="&xsd;decimal">7</speakingScore>
+        <readingScore rdf:datatype="&xsd;decimal">7</readingScore>
     </owl:NamedIndividual>
     
 
@@ -456,7 +456,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara">
-        <Common:tookATest rdf:resource="&Common;SaraIELTSTest"/>
+        <Common:tookATest rdf:resource="&Common;ELTSTest6565_5"/>
     </rdf:Description>
     
 
@@ -464,7 +464,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina">
-        <Common:tookATest rdf:resource="&Common;SinaIELTSTest"/>
+        <Common:tookATest rdf:resource="&Common;IELTSTest7777"/>
     </rdf:Description>
 </rdf:RDF>
 

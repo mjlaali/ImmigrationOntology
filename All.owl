@@ -6,21 +6,86 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Test "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#" >
+    <!ENTITY Person "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#" >
+    <!ENTITY Common "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#" >
+    <!ENTITY Activity "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#" >
 ]>
 
 
 <rdf:RDF xmlns="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#"
      xml:base="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Test="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#"
+     xmlns:Activity="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Common="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#"
+     xmlns:Person="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All">
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering">
+        <rdf:type rdf:resource="&Activity;Working"/>
+        <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">450</Person:activityLength>
+        <Activity:hasSkillLevel rdf:datatype="&xsd;string">A</Activity:hasSkillLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Li -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Li">
+        <rdf:type rdf:resource="&Person;Person"/>
+        <Person:hasAge rdf:datatype="&xsd;nonNegativeInteger">35</Person:hasAge>
+        <Person:didActivity rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering"/>
+        <Person:didActivity rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia"/>
+        <Common:tookATest rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TEFLevel7"/>
+        <Person:citizenOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#China"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia">
+        <rdf:type rdf:resource="&Activity;Studying"/>
+        <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">400</Person:activityLength>
+        <Activity:hasSkillLevel rdf:datatype="&xsd;string">PhD</Activity:hasSkillLevel>
+        <Person:activityLocation rdf:resource="&Person;Canada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TEFLevel7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TEFLevel7">
+        <rdf:type rdf:resource="&Test;TEF"/>
+        <Test:listeningScore rdf:datatype="&xsd;decimal">260</Test:listeningScore>
+        <Test:writingScore rdf:datatype="&xsd;decimal">260</Test:writingScore>
+        <Test:speakingScore rdf:datatype="&xsd;decimal">310</Test:speakingScore>
+        <Test:readingScore rdf:datatype="&xsd;decimal">310</Test:readingScore>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
