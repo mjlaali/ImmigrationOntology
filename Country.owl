@@ -35,7 +35,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn -->
 
     <owl:ObjectProperty rdf:about="&Person;locatedIn">
-        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
     </owl:ObjectProperty>
     
