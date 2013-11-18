@@ -6,6 +6,7 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY PR "http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#" >
     <!ENTITY Test "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#" >
     <!ENTITY Person "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#" >
     <!ENTITY Common "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#" >
@@ -18,6 +19,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:Test="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#"
      xmlns:Activity="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#"
+     xmlns:PR="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -29,6 +31,60 @@
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#DependantChilderen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#DependantChilderen">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Person;hasAge"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="&xsd;integer">22</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&PR;FamilyClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#MarriageClass -->
+
+    <rdf:Description rdf:about="&PR;MarriageClass">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Person;isMarriedTo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#Citizen"/>
+                            <rdf:Description rdf:about="&PR;PR"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -66,13 +122,25 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Majid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Majid">
+        <rdf:type rdf:resource="&Person;Person"/>
+        <Person:hasAge rdf:datatype="&xsd;nonNegativeInteger">29</Person:hasAge>
+        <PR:meetCSQRequirment rdf:datatype="&xsd;boolean">true</PR:meetCSQRequirment>
+        <Activity:doActivity rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia"/>
+        <Person:citizenOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran"/>
+        <Activity:doActivity rdf:resource="&Person;LiveInCanada1Y"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia">
         <rdf:type rdf:resource="&Activity;Studying"/>
         <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">400</Person:activityLength>
         <Activity:hasSkillLevel rdf:datatype="&xsd;string">PhD</Activity:hasSkillLevel>
-        <Person:activityLocation rdf:resource="&Person;Canada"/>
     </owl:NamedIndividual>
     
 
@@ -86,6 +154,35 @@
         <Test:speakingScore rdf:datatype="&xsd;decimal">310</Test:speakingScore>
         <Test:readingScore rdf:datatype="&xsd;decimal">310</Test:readingScore>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Ali -->
+
+    <rdf:Description rdf:about="&Common;Ali">
+        <PR:meetCSQRequirment rdf:datatype="&xsd;boolean">true</PR:meetCSQRequirment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Li"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TEFLevel7"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#China"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 

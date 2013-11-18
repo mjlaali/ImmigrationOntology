@@ -32,21 +32,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel4 -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#Citizen -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel4"/>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship"/>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NCLCLevel4 -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NCLCLevel4"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#Citizen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status"/>
+    </owl:Class>
     
 
 

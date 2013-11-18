@@ -6,17 +6,21 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Person "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#" >
     <!ENTITY Common "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#" >
+    <!ENTITY Activity "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#" >
 ]>
 
 
 <rdf:RDF xmlns="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#"
      xml:base="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Activity="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:Common="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#">
+     xmlns:Common="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#"
+     xmlns:Person="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common">
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person"/>
@@ -36,21 +40,42 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#hasCompany -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#tookATest -->
 
-    <owl:ObjectProperty rdf:about="&Common;hasCompany">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    <owl:ObjectProperty rdf:about="&Common;tookATest">
+        <rdfs:domain rdf:resource="&Person;Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#LanguageTest"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#tookATest -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:ObjectProperty rdf:about="&Common;tookATest">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#LanguageTest"/>
-    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#medicalTest -->
+
+    <owl:DatatypeProperty rdf:about="&Common;medicalTest">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Person;Person"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#policeCheck -->
+
+    <owl:DatatypeProperty rdf:about="&Common;policeCheck">
+        <rdfs:domain rdf:resource="&Person;Person"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -65,86 +90,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CELPIP2_2_2_2 -->
-
-    <owl:Class rdf:about="&Common;CELPIP2_2_2_2">
-        <rdfs:subClassOf rdf:resource="&Common;CELPIPGeneral"/>
-        <rdfs:subClassOf rdf:resource="&Common;CLBEngLevel4"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CELPIPGeneral -->
-
-    <owl:Class rdf:about="&Common;CELPIPGeneral">
-        <rdfs:subClassOf rdf:resource="&Common;EnglishTest"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLB -->
-
-    <owl:Class rdf:about="&Common;CLB">
-        <rdfs:subClassOf rdf:resource="&Common;LanguageTest"/>
-        <rdfs:comment>http://www.cic.gc.ca/english/immigrate/skilled/language-testing.asp
-</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBEng -->
-
-    <owl:Class rdf:about="&Common;CLBEng">
-        <rdfs:subClassOf rdf:resource="&Common;EnglishTest"/>
-        <rdfs:comment>The Canadian Language Benchmarks</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBEngLevel4 -->
-
-    <owl:Class rdf:about="&Common;CLBEngLevel4">
-        <rdfs:subClassOf rdf:resource="&Common;CLBEng"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBFrench -->
-
-    <owl:Class rdf:about="&Common;CLBFrench">
-        <rdfs:subClassOf rdf:resource="&Common;FrenchTest"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel4 -->
-
-    <owl:Class rdf:about="&Common;CLBLevel4">
-        <rdfs:subClassOf rdf:resource="&Common;CLB"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CLBLevel7 -->
-
-    <owl:Class rdf:about="&Common;CLBLevel7">
-        <rdfs:subClassOf rdf:resource="&Common;CLBLevel4"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#China -->
 
     <owl:Class rdf:about="&Common;China">
         <rdfs:subClassOf rdf:resource="&Common;CountryNeedMedical"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Citizenship -->
-
-    <owl:Class rdf:about="&Common;Citizenship">
-        <rdfs:subClassOf rdf:resource="&Common;Status"/>
     </owl:Class>
     
 
@@ -157,18 +106,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Company -->
-
-    <owl:Class rdf:about="&Common;Company">
-        <rdfs:subClassOf rdf:resource="&Common;QualifiedPerson"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Country -->
 
     <owl:Class rdf:about="&Common;Country">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <rdfs:subClassOf rdf:resource="&Person;Person"/>
     </owl:Class>
     
 
@@ -189,18 +130,17 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#EnglishTest -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Criminal -->
 
-    <owl:Class rdf:about="&Common;EnglishTest">
-        <rdfs:subClassOf rdf:resource="&Common;LanguageTest"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#FrenchTest -->
-
-    <owl:Class rdf:about="&Common;FrenchTest">
-        <rdfs:subClassOf rdf:resource="&Common;LanguageTest"/>
+    <owl:Class rdf:about="&Common;Criminal">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Person;didActivity"/>
+                <owl:someValuesFrom rdf:resource="&Activity;Crime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Person;Person"/>
+        <owl:disjointWith rdf:resource="&Common;NonCriminal"/>
     </owl:Class>
     
 
@@ -242,23 +182,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#IELTS -->
-
-    <owl:Class rdf:about="&Common;IELTS">
-        <rdfs:subClassOf rdf:resource="&Common;EnglishTest"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#IELTS4.5_3.5_4_4 -->
-
-    <owl:Class rdf:about="&Common;IELTS4.5_3.5_4_4">
-        <rdfs:subClassOf rdf:resource="&Common;CLBEngLevel4"/>
-        <rdfs:subClassOf rdf:resource="&Common;IELTS"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#India -->
 
     <owl:Class rdf:about="&Common;India">
@@ -271,14 +194,6 @@
 
     <owl:Class rdf:about="&Common;Iran">
         <rdfs:subClassOf rdf:resource="&Common;CountryWithoutMedical"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LanguageTest -->
-
-    <owl:Class rdf:about="&Common;LanguageTest">
-        <rdfs:subClassOf rdf:resource="&Common;Test"/>
     </owl:Class>
     
 
@@ -299,19 +214,16 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NCLC -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NonCriminal -->
 
-    <owl:Class rdf:about="&Common;NCLC">
-        <rdfs:subClassOf rdf:resource="&Common;FrenchTest"/>
-        <rdfs:comment>Niveaux de compétence linguistique canadien</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NCLCLevel4 -->
-
-    <owl:Class rdf:about="&Common;NCLCLevel4">
-        <rdfs:subClassOf rdf:resource="&Common;NCLC"/>
+    <owl:Class rdf:about="&Common;NonCriminal">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Common;policeCheck"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Person;Person"/>
     </owl:Class>
     
 
@@ -327,7 +239,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson -->
 
     <owl:Class rdf:about="&Common;QualifiedPerson">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <rdfs:subClassOf rdf:resource="&Person;Person"/>
     </owl:Class>
     
 
@@ -335,7 +247,8 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status -->
 
     <owl:Class rdf:about="&Common;Status">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <rdfs:subClassOf rdf:resource="&Person;Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#InadmissibleToComeToCanada"/>
     </owl:Class>
     
 
@@ -363,27 +276,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#TEF -->
-
-    <owl:Class rdf:about="&Common;TEF">
-        <rdfs:subClassOf rdf:resource="&Common;FrenchTest"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#TEF181_145_121_181 -->
-
-    <owl:Class rdf:about="&Common;TEF181_145_121_181">
-        <rdfs:subClassOf rdf:resource="&Common;NCLCLevel4"/>
-        <rdfs:subClassOf rdf:resource="&Common;TEF"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Test -->
 
     <owl:Class rdf:about="&Common;Test">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <rdfs:subClassOf rdf:resource="&Person;Person"/>
     </owl:Class>
     
 
@@ -396,25 +292,39 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#InadmissibleToComeToCanada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#InadmissibleToComeToCanada">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Person;didActivity"/>
+                <owl:someValuesFrom rdf:resource="&Activity;Crime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Person;Person"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    <owl:Class rdf:about="&Person;Adult">
+        <rdfs:subClassOf rdf:resource="&Person;Person"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    <owl:Class rdf:about="&Person;Child">
+        <rdfs:subClassOf rdf:resource="&Person;Person"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    <owl:Class rdf:about="&Person;Person"/>
     
 
 
@@ -426,6 +336,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Ali -->
+
+    <owl:NamedIndividual rdf:about="&Common;Ali">
+        <rdf:type rdf:resource="&Person;Person"/>
+        <Activity:doActivity rdf:resource="&Common;LiveInIran"/>
+    </owl:NamedIndividual>
     
 
 
@@ -453,9 +372,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Kalyan -->
+
+    <owl:NamedIndividual rdf:about="&Common;Kalyan">
+        <rdf:type rdf:resource="&Person;Person"/>
+        <Person:hasAge rdf:datatype="&xsd;nonNegativeInteger">42</Person:hasAge>
+        <Person:didActivity rdf:resource="&Activity;SkilledTradesExperience"/>
+        <Activity:hasOffer rdf:resource="&Activity;WorkOfferInCanada"/>
+        <Person:citizenOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#India"/>
+        <Activity:likeToLive rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Ontorio"/>
+        <Common:tookATest rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CELPIPLevel5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LiveInIran -->
+
+    <owl:NamedIndividual rdf:about="&Common;LiveInIran">
+        <rdf:type rdf:resource="&Person;Living"/>
+        <Person:locatedIn rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara">
+    <rdf:Description rdf:about="&Person;Sara">
         <Common:tookATest rdf:resource="&Common;ELTSTest6565_5"/>
     </rdf:Description>
     
@@ -463,7 +405,7 @@
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina">
+    <rdf:Description rdf:about="&Person;Sina">
         <Common:tookATest rdf:resource="&Common;IELTSTest7777"/>
     </rdf:Description>
 </rdf:RDF>
