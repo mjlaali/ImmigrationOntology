@@ -30,6 +30,7 @@
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit"/>
     </owl:Ontology>
     
 
@@ -157,6 +158,52 @@
                     <rdf:Description rdf:about="&PR;FamilyClass"/>
                     <rdf:Description rdf:about="&PR;OtherPR"/>
                     <rdf:Description rdf:about="&PR;Refugees"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#CanadaStudent -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#CanadaStudent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#Citizen"/>
+                    <rdf:Description rdf:about="&PR;PR"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#ForeignArmedForcesMember"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#ForeignRepresentativesFamilyMember"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#StudyPermit"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#TemporaryVisit"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Activity;doActivity"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&Activity;Studying"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&Person;activityLength"/>
+                                                <owl:someValuesFrom>
+                                                    <rdfs:Datatype>
+                                                        <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
+                                                        <owl:withRestrictions rdf:parseType="Collection">
+                                                            <rdf:Description>
+                                                                <xsd:maxInclusive rdf:datatype="&xsd;integer">183</xsd:maxInclusive>
+                                                            </rdf:Description>
+                                                        </owl:withRestrictions>
+                                                    </rdfs:Datatype>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>

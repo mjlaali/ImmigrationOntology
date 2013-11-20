@@ -40,6 +40,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#ownMoney -->
+
+    <owl:ObjectProperty rdf:about="&Common;ownMoney">
+        <rdfs:range rdf:resource="&Activity;Money"/>
+        <rdfs:domain rdf:resource="&Person;Person"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#tookATest -->
 
     <owl:ObjectProperty rdf:about="&Common;tookATest">
@@ -90,42 +99,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#China -->
-
-    <owl:Class rdf:about="&Common;China">
-        <rdfs:subClassOf rdf:resource="&Common;CountryNeedMedical"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance -->
 
     <owl:Class rdf:about="&Common;Clearance">
         <rdfs:subClassOf rdf:resource="&Common;QualifiedPerson"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Country -->
-
-    <owl:Class rdf:about="&Common;Country">
-        <rdfs:subClassOf rdf:resource="&Person;Person"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryNeedMedical -->
-
-    <owl:Class rdf:about="&Common;CountryNeedMedical">
-        <rdfs:subClassOf rdf:resource="&Common;Country"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#CountryWithoutMedical -->
-
-    <owl:Class rdf:about="&Common;CountryWithoutMedical">
-        <rdfs:subClassOf rdf:resource="&Common;Country"/>
     </owl:Class>
     
 
@@ -145,14 +122,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Germany -->
-
-    <owl:Class rdf:about="&Common;Germany">
-        <rdfs:subClassOf rdf:resource="&Common;CountryWithoutMedical"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#HaveOffer -->
 
     <owl:Class rdf:about="&Common;HaveOffer">
@@ -167,33 +136,26 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&Common;CountryWithoutMedical"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&Common;CountryNeedMedical"/>
-                            <rdf:Description rdf:about="&Common;MedicalTest"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Person;citizenOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedMedicalTest"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Common;medicalTest"/>
+                                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                            </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Person;citizenOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNoMedicalTest"/>
+                    </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&Common;QualifiedPerson"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#India -->
-
-    <owl:Class rdf:about="&Common;India">
-        <rdfs:subClassOf rdf:resource="&Common;CountryNeedMedical"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Iran -->
-
-    <owl:Class rdf:about="&Common;Iran">
-        <rdfs:subClassOf rdf:resource="&Common;CountryWithoutMedical"/>
+        <rdfs:subClassOf rdf:resource="&Person;Person"/>
     </owl:Class>
     
 
@@ -202,14 +164,6 @@
 
     <owl:Class rdf:about="&Common;LivinExpenses">
         <rdfs:subClassOf rdf:resource="&Common;QualifiedForFinance"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#MedicalTest -->
-
-    <owl:Class rdf:about="&Common;MedicalTest">
-        <rdfs:subClassOf rdf:resource="&Common;Test"/>
     </owl:Class>
     
 
@@ -249,37 +203,6 @@
     <owl:Class rdf:about="&Common;Status">
         <rdfs:subClassOf rdf:resource="&Person;Person"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#InadmissibleToComeToCanada"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#StudyPermit -->
-
-    <owl:Class rdf:about="&Common;StudyPermit">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&Common;Clearance"/>
-                    <rdf:Description rdf:about="&Common;HaveOffer"/>
-                    <rdf:Description rdf:about="&Common;Healthy"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&Common;LivinExpenses"/>
-                            <rdf:Description rdf:about="&Common;TuitionFee"/>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&Common;Status"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Test -->
-
-    <owl:Class rdf:about="&Common;Test">
-        <rdfs:subClassOf rdf:resource="&Person;Person"/>
     </owl:Class>
     
 

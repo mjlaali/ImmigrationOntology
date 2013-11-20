@@ -35,7 +35,6 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn -->
 
     <owl:ObjectProperty rdf:about="&Person;locatedIn">
-        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
     </owl:ObjectProperty>
     
@@ -60,10 +59,42 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country_ -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country_">
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedMedicalTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedMedicalTest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedVisa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedVisa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNoMedicalTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNoMedicalTest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryVisaException -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryVisaException">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country"/>
     </owl:Class>
     
 
@@ -86,7 +117,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country_"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country"/>
     </owl:Class>
     
 
@@ -130,6 +161,8 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#China -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#China">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedMedicalTest"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedVisa"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
     </owl:NamedIndividual>
     
@@ -138,6 +171,8 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#German -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#German">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNoMedicalTest"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryVisaException"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
     </owl:NamedIndividual>
     
@@ -146,6 +181,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#India -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#India">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedMedicalTest"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
     </owl:NamedIndividual>
     
@@ -154,6 +190,8 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedVisa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNoMedicalTest"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
     </owl:NamedIndividual>
     
@@ -189,7 +227,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Canada -->
 
     <owl:NamedIndividual rdf:about="&Person;Canada">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country_"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country"/>
     </owl:NamedIndividual>
     
 

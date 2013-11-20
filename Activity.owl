@@ -35,6 +35,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#costMoney -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#costMoney">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Money"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#doActivity -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#doActivity">
@@ -81,6 +90,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#provideMoney -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#provideMoney">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Money"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#didActivity -->
 
     <owl:ObjectProperty rdf:about="&Person;didActivity">
@@ -107,6 +125,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#amountOf -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#amountOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Money"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -156,6 +184,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Money -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Money"/>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
@@ -166,6 +200,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Studying">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+        <rdfs:subClassOf rdf:resource="&Person;Living"/>
     </owl:Class>
     
 
@@ -174,6 +209,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Working">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Activity"/>
+        <rdfs:subClassOf rdf:resource="&Person;Living"/>
     </owl:Class>
     
 
