@@ -187,6 +187,30 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Bachelor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Studying"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Studying"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Person;activityLength"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">1095</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">MS</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -203,6 +227,30 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Master">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Studying"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Studying"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Person;activityLength"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">365</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">MS</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
