@@ -138,6 +138,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#University -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#University">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Location"/>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -201,12 +209,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Alberta_University -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Alberta_University">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#University"/>
+        <Person:locatedIn rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Alberta"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#China -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#China">
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedMedicalTest"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CountryNeedVisa"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Concordia_University -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Concordia_University">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#University"/>
+        <Person:locatedIn rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec"/>
     </owl:NamedIndividual>
     
 
@@ -244,6 +270,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Manitoba">
         <Person:locatedIn rdf:resource="&Person;Canada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Mcgill_University -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Mcgill_University">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#University"/>
+        <Person:locatedIn rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec"/>
     </owl:NamedIndividual>
     
 
