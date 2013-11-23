@@ -166,7 +166,7 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OtherProvince"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#NotQuebecProvince"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
@@ -332,7 +332,7 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
                                     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Studying"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#QuebecProvince"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
                             </owl:Class>
@@ -382,7 +382,7 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
                                             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Studying"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn"/>
-                                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#QuebecProvince"/>
+                                                <owl:hasValue rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#activityLength"/>

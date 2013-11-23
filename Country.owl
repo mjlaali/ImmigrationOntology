@@ -54,6 +54,22 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CanadaProvince -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CanadaProvince">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Manitoba"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Alberta"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#New_Brunswick"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#British_Columbia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Saskatchewan"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Newfoundland_and_Labrador"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Nova_Scotia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Ontorio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Prince_Edward_Island"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Location"/>
     </owl:Class>
     
@@ -105,11 +121,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OtherProvince -->
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#NotQuebecProvince -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OtherProvince">
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#NotQuebecProvince">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CanadaProvince"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#QuebecProvince"/>
     </owl:Class>
     
 
@@ -118,14 +133,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Country"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#QuebecProvince -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#QuebecProvince">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CanadaProvince"/>
     </owl:Class>
     
 
@@ -141,6 +148,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#British_Columbia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#British_Columbia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#New_Brunswick -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#New_Brunswick"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Newfoundland_and_Labrador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Newfoundland_and_Labrador"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Nova_Scotia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Nova_Scotia"/>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia">
@@ -149,10 +180,21 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Prince_Edward_Island -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Prince_Edward_Island"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Saskatchewan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Saskatchewan"/>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Alberta -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Alberta">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OtherProvince"/>
         <Person:locatedIn rdf:resource="&Person;Canada"/>
     </owl:NamedIndividual>
     
@@ -200,7 +242,6 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Manitoba -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Manitoba">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OtherProvince"/>
         <Person:locatedIn rdf:resource="&Person;Canada"/>
     </owl:NamedIndividual>
     
@@ -209,7 +250,6 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Ontorio -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Ontorio">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OtherProvince"/>
         <Person:locatedIn rdf:resource="&Person;Canada"/>
     </owl:NamedIndividual>
     
@@ -218,7 +258,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#QuebecProvince"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#CanadaProvince"/>
         <Person:locatedIn rdf:resource="&Person;Canada"/>
     </owl:NamedIndividual>
     
@@ -237,6 +277,33 @@
     <owl:NamedIndividual rdf:about="&Person;LiveInCanada1Y">
         <Person:locatedIn rdf:resource="&Person;Canada"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Alberta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#China"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#German"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#India"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Manitoba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Ontorio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec"/>
+            <rdf:Description rdf:about="&Person;Canada"/>
+            <rdf:Description rdf:about="&Person;LiveInCanada1Y"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 
