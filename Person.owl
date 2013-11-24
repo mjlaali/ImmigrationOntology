@@ -82,6 +82,7 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasAge -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasAge">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
         <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
     </owl:DatatypeProperty>
@@ -123,6 +124,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child"/>
     </owl:Class>
     
 
@@ -179,6 +181,14 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Couple"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Single"/>
                 </owl:unionOf>
@@ -207,10 +217,53 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Ben -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Ben">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <hasAge rdf:datatype="&xsd;nonNegativeInteger">5</hasAge>
+        <hasParent rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Ross"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Chandler -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Chandler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <hasAge rdf:datatype="&xsd;nonNegativeInteger">35</hasAge>
+        <citizenOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Canada"/>
+        <isMarriedTo rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Monica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Emma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Emma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <hasAge rdf:datatype="&xsd;nonNegativeInteger">1</hasAge>
+        <hasParent rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Rachel"/>
+        <hasParent rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Ross"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Jack -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Jack">
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <hasAge rdf:datatype="&xsd;nonNegativeInteger">42</hasAge>
+        <isMarriedTo rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Joey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Joey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Joey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <hasAge rdf:datatype="&xsd;nonNegativeInteger">34</hasAge>
     </owl:NamedIndividual>
     
 
@@ -218,6 +271,39 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#LiveInCanada1Y -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#LiveInCanada1Y"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Monica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Monica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Phoebe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Phoebe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Single"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Rachel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Rachel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+        <isMarriedTo rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Ross"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Ross -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Ross">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
+    </owl:NamedIndividual>
     
 
 

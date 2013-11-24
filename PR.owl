@@ -6,12 +6,14 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Activity "http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#" >
 ]>
 
 
 <rdf:RDF xmlns="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#"
      xml:base="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Activity="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -19,6 +21,26 @@
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasOccupation -->
+
+    <owl:ObjectProperty rdf:about="&Activity;hasOccupation">
+        <rdfs:range rdf:resource="&Activity;Occupation"/>
+        <rdfs:domain rdf:resource="&Activity;Working"/>
+    </owl:ObjectProperty>
     
 
 
@@ -51,6 +73,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation -->
+
+    <owl:Class rdf:about="&Activity;Occupation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#CLB4ReadingWriting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#CLB4ReadingWriting"/>
     
 
 
@@ -123,7 +157,7 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
+        <rdfs:subClassOf rdf:resource="&Activity;Occupation"/>
     </owl:Class>
     
 
@@ -135,11 +169,11 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasOffer"/>
+                        <owl:onProperty rdf:resource="&Activity;hasOffer"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Working"/>
+                                    <rdf:Description rdf:about="&Activity;Working"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn"/>
                                         <owl:hasValue rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Canada"/>
@@ -162,7 +196,7 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#likeToLive"/>
+                        <owl:onProperty rdf:resource="&Activity;likeToLive"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn"/>
@@ -183,10 +217,10 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Working"/>
+                                    <rdf:Description rdf:about="&Activity;Working"/>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasOccupation"/>
-                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#SkilledTrades"/>
+                                        <owl:onProperty rdf:resource="&Activity;hasOccupation"/>
+                                        <owl:hasValue rdf:resource="&Activity;SkilledTrades"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#activityLength"/>
@@ -225,11 +259,11 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasOffer"/>
+                                        <owl:onProperty rdf:resource="&Activity;hasOffer"/>
                                         <owl:someValuesFrom>
                                             <owl:Class>
                                                 <owl:intersectionOf rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Working"/>
+                                                    <rdf:Description rdf:about="&Activity;Working"/>
                                                     <owl:Restriction>
                                                         <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn"/>
                                                         <owl:hasValue rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Canada"/>
@@ -243,13 +277,13 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
                                         <owl:someValuesFrom>
                                             <owl:Class>
                                                 <owl:intersectionOf rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Studying"/>
+                                                    <rdf:Description rdf:about="&Activity;Studying"/>
                                                     <owl:Restriction>
                                                         <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn"/>
                                                         <owl:hasValue rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Canada"/>
                                                     </owl:Restriction>
                                                     <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel"/>
+                                                        <owl:onProperty rdf:resource="&Activity;hasSkillLevel"/>
                                                         <owl:hasValue rdf:datatype="&xsd;string">PhD</owl:hasValue>
                                                     </owl:Restriction>
                                                 </owl:intersectionOf>
@@ -271,7 +305,7 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#ValidWorkExperienceForFSW"/>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasOccupation"/>
+                                        <owl:onProperty rdf:resource="&Activity;hasOccupation"/>
                                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
@@ -335,9 +369,9 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Class>
                                         <owl:unionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Bachelor"/>
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Master"/>
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#PhD"/>
+                                            <rdf:Description rdf:about="&Activity;Bachelor"/>
+                                            <rdf:Description rdf:about="&Activity;Master"/>
+                                            <rdf:Description rdf:about="&Activity;PhD"/>
                                         </owl:unionOf>
                                     </owl:Class>
                                     <owl:Restriction>
@@ -381,11 +415,11 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#doActivity"/>
+                                <owl:onProperty rdf:resource="&Activity;doActivity"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Studying"/>
+                                            <rdf:Description rdf:about="&Activity;Studying"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn"/>
                                                 <owl:hasValue rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec"/>
@@ -408,7 +442,7 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
                                 </owl:someValuesFrom>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#doActivity"/>
+                                <owl:onProperty rdf:resource="&Activity;doActivity"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
@@ -441,19 +475,19 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Working"/>
+                    <rdf:Description rdf:about="&Activity;Working"/>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel"/>
+                                <owl:onProperty rdf:resource="&Activity;hasSkillLevel"/>
                                 <owl:hasValue rdf:datatype="&xsd;string">0</owl:hasValue>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel"/>
+                                <owl:onProperty rdf:resource="&Activity;hasSkillLevel"/>
                                 <owl:hasValue rdf:datatype="&xsd;string">A</owl:hasValue>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasSkillLevel"/>
+                                <owl:onProperty rdf:resource="&Activity;hasSkillLevel"/>
                                 <owl:hasValue rdf:datatype="&xsd;string">B</owl:hasValue>
                             </owl:Restriction>
                         </owl:unionOf>
@@ -474,7 +508,7 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Working"/>
+        <rdfs:subClassOf rdf:resource="&Activity;Working"/>
         <rdfs:comment>Valid work experience for Fedoral Skill Worker (FSW)
 </rdfs:comment>
     </owl:Class>
@@ -494,7 +528,8 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Chemical_engineers -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Chemical_engineers">
+    <rdf:Description rdf:about="&Activity;Chemical_engineers">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations"/>
     </rdf:Description>
     
@@ -502,7 +537,8 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Civil_engineers -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Civil_engineers">
+    <rdf:Description rdf:about="&Activity;Civil_engineers">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations"/>
     </rdf:Description>
     
@@ -510,7 +546,8 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Computer_engineers -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Computer_engineers">
+    <rdf:Description rdf:about="&Activity;Computer_engineers">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations"/>
     </rdf:Description>
     
@@ -518,15 +555,25 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Computer_programmers_and_interactive_media_developers -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Computer_programmers_and_interactive_media_developers">
+    <rdf:Description rdf:about="&Activity;Computer_programmers_and_interactive_media_developers">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Electrical_engineers -->
+
+    <rdf:Description rdf:about="&Activity;Electrical_engineers">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
     </rdf:Description>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Engineering_managers -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Engineering_managers">
+    <rdf:Description rdf:about="&Activity;Engineering_managers">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations"/>
     </rdf:Description>
     
@@ -534,7 +581,8 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Financial_and_investment_analysts -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Financial_and_investment_analysts">
+    <rdf:Description rdf:about="&Activity;Financial_and_investment_analysts">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations"/>
     </rdf:Description>
     
@@ -542,7 +590,8 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Geoscientists_and_oceanographers -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Geoscientists_and_oceanographers">
+    <rdf:Description rdf:about="&Activity;Geoscientists_and_oceanographers">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations"/>
     </rdf:Description>
     
@@ -550,7 +599,8 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Mechanical_engineers -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Mechanical_engineers">
+    <rdf:Description rdf:about="&Activity;Mechanical_engineers">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations"/>
     </rdf:Description>
     
@@ -558,8 +608,25 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Mining_engineers -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Mining_engineers">
+    <rdf:Description rdf:about="&Activity;Mining_engineers">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EligibleOccupations"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#SkilledTrades -->
+
+    <rdf:Description rdf:about="&Activity;SkilledTrades">
+        <rdf:type rdf:resource="&Activity;Occupation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#SkilledTradesExperience -->
+
+    <rdf:Description rdf:about="&Activity;SkilledTradesExperience">
+        <Activity:hasOccupation rdf:resource="&Activity;SkilledTrades"/>
     </rdf:Description>
 </rdf:RDF>
 

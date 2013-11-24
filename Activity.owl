@@ -53,25 +53,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasDiploma -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasDiploma">
-        <rdfs:comment>You will get a diploma when you finish your studying</rdfs:comment>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Studying"/>
-        <rdfs:domain rdf:resource="&Person;Person"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasOccupation -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasOccupation">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Working"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasOffer -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasOffer">
@@ -86,6 +67,23 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#likeToLive">
         <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Location"/>
         <rdfs:domain rdf:resource="&Person;Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#hasOffer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#likeToLive"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#liveIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#liveIn">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Location"/>
+        <rdfs:domain rdf:resource="&Person;Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#doActivity"/>
+            <rdf:Description rdf:about="&Person;locatedIn"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -261,12 +259,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#PhD -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#PhD">
@@ -338,65 +330,49 @@
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Chemical_engineers -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Chemical_engineers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Chemical_engineers"/>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Civil_engineers -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Civil_engineers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Civil_engineers"/>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Computer_engineers -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Computer_engineers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Computer_engineers"/>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Computer_programmers_and_interactive_media_developers -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Computer_programmers_and_interactive_media_developers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Computer_programmers_and_interactive_media_developers"/>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Electrical_engineers -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Electrical_engineers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Electrical_engineers"/>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Engineering_managers -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Engineering_managers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Engineering_managers"/>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Financial_and_investment_analysts -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Financial_and_investment_analysts">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Financial_and_investment_analysts"/>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Geoscientists_and_oceanographers -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Geoscientists_and_oceanographers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Geoscientists_and_oceanographers"/>
     
 
 
@@ -410,17 +386,13 @@
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Mechanical_engineers -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Mechanical_engineers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Mechanical_engineers"/>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Mining_engineers -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Mining_engineers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Mining_engineers"/>
     
 
 
@@ -445,9 +417,7 @@
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#SkilledTrades -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#SkilledTrades">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Occupation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#SkilledTrades"/>
     
 
 
@@ -456,7 +426,6 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#SkilledTradesExperience">
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#Working"/>
         <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">800</Person:activityLength>
-        <hasOccupation rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#SkilledTrades"/>
     </owl:NamedIndividual>
     
 

@@ -378,6 +378,7 @@
 
     <rdf:Description rdf:about="&Common;Ali">
         <PR:meetCSQRequirment rdf:datatype="&xsd;boolean">true</PR:meetCSQRequirment>
+        <Activity:likeToLive rdf:resource="&Person;Canada"/>
     </rdf:Description>
     
 
