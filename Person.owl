@@ -16,7 +16,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person">
-        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Location"/>
     </owl:Ontology>
     
 
@@ -211,33 +211,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Jack">
         <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#LiveInCanada1Y -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#LiveInCanada1Y"/>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
-        <hasAge rdf:datatype="&xsd;nonNegativeInteger">26</hasAge>
-        <citizenOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina">
-        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
-        <hasAge rdf:datatype="&xsd;nonNegativeInteger">29</hasAge>
-        <citizenOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran"/>
-        <isMarriedTo rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

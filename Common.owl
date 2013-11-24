@@ -266,7 +266,6 @@
 
     <owl:NamedIndividual rdf:about="&Common;Ali">
         <rdf:type rdf:resource="&Person;Person"/>
-        <Activity:doActivity rdf:resource="&Common;LiveInIran"/>
     </owl:NamedIndividual>
     
 
@@ -292,45 +291,6 @@
         <speakingScore rdf:datatype="&xsd;decimal">7</speakingScore>
         <readingScore rdf:datatype="&xsd;decimal">7</readingScore>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Kalyan -->
-
-    <owl:NamedIndividual rdf:about="&Common;Kalyan">
-        <rdf:type rdf:resource="&Person;Person"/>
-        <Person:hasAge rdf:datatype="&xsd;nonNegativeInteger">42</Person:hasAge>
-        <Person:didActivity rdf:resource="&Activity;SkilledTradesExperience"/>
-        <Activity:hasOffer rdf:resource="&Activity;WorkOfferInCanada"/>
-        <Person:citizenOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#India"/>
-        <Activity:likeToLive rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Ontorio"/>
-        <Common:tookATest rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CELPIPLevel5"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LiveInIran -->
-
-    <owl:NamedIndividual rdf:about="&Common;LiveInIran">
-        <rdf:type rdf:resource="&Person;Living"/>
-        <Person:locatedIn rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara -->
-
-    <rdf:Description rdf:about="&Person;Sara">
-        <Common:tookATest rdf:resource="&Common;ELTSTest6565_5"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina -->
-
-    <rdf:Description rdf:about="&Person;Sina">
-        <Common:tookATest rdf:resource="&Common;IELTSTest7777"/>
-    </rdf:Description>
 </rdf:RDF>
 
 

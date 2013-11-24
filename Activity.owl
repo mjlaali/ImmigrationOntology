@@ -18,7 +18,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:Person="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity">
-        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Location"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person"/>
     </owl:Ontology>
     
@@ -468,32 +468,6 @@
         <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">400</Person:activityLength>
         <Person:locatedIn rdf:resource="&Person;Canada"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#LiveInCanada1Y -->
-
-    <rdf:Description rdf:about="&Person;LiveInCanada1Y">
-        <rdf:type rdf:resource="&Person;Living"/>
-        <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">365</Person:activityLength>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara -->
-
-    <rdf:Description rdf:about="&Person;Sara">
-        <Person:didActivity rdf:resource="&Person;LiveInCanada1Y"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sina -->
-
-    <rdf:Description rdf:about="&Person;Sina">
-        <Person:didActivity rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#ProgrammingWorkExperience"/>
-        <Person:didActivity rdf:resource="&Person;LiveInCanada1Y"/>
-    </rdf:Description>
 </rdf:RDF>
 
 
