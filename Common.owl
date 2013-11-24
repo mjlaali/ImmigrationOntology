@@ -202,7 +202,6 @@
 
     <owl:Class rdf:about="&Common;Status">
         <rdfs:subClassOf rdf:resource="&Person;Person"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#InadmissibleToComeToCanada"/>
     </owl:Class>
     
 
@@ -211,20 +210,6 @@
 
     <owl:Class rdf:about="&Common;TuitionFee">
         <rdfs:subClassOf rdf:resource="&Common;QualifiedForFinance"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#InadmissibleToComeToCanada -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#InadmissibleToComeToCanada">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&Person;didActivity"/>
-                <owl:someValuesFrom rdf:resource="&Activity;Crime"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&Person;Person"/>
     </owl:Class>
     
 

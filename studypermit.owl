@@ -110,30 +110,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#CanadaResidence -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#CanadaResidence">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#doActivity"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn"/>
-                                <owl:hasValue rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Canada"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#CanadaStudent -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#CanadaStudent">
@@ -318,27 +294,6 @@
     <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#PhDStudentGraduatedInCanada -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#PhDStudentGraduatedInCanada">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#GraduatedStudent"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#didActivity"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Activity#PhD"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#locatedIn"/>
-                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Canada"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#GraduatedStudent"/>
     </owl:Class>
     

@@ -97,6 +97,49 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDStudentGraduatedInQuebec -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDStudentGraduatedInQuebec">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#GraduatedStudent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Person;didActivity"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&Activity;PhD"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&Person;locatedIn"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#GraduatedStudent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Criminal -->
+
+    <rdf:Description rdf:about="&Common;Criminal">
+        <owl:disjointWith rdf:resource="&Common;Status"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status -->
+
+    <rdf:Description rdf:about="&Common;Status"/>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#NotQuebecProvince -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#NotQuebecProvince">
@@ -228,6 +271,34 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#PhDStudentGraduatedInCanada -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#PhDStudentGraduatedInCanada">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#GraduatedStudent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Person;didActivity"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&Activity;PhD"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&Person;locatedIn"/>
+                                        <owl:hasValue rdf:resource="&Person;Canada"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
     </rdf:Description>
@@ -394,16 +465,6 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Li"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TEFLevel7"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#China"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#British_Columbia"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Li"/>
@@ -423,6 +484,16 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Ontorio"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Quebec"/>
             <rdf:Description rdf:about="&Person;LiveInCanada1Y"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Li"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TEFLevel7"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#China"/>
         </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
