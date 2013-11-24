@@ -15,7 +15,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/StudyPermit">
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
     </owl:Ontology>
     
