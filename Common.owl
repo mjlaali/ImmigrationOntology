@@ -251,6 +251,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Joey -->
+
+    <rdf:Description rdf:about="&Person;Joey">
+        <Common:policeCheck rdf:datatype="&xsd;boolean">true</Common:policeCheck>
+        <Common:medicalTest rdf:datatype="&xsd;boolean">true</Common:medicalTest>
+    </rdf:Description>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Sara -->
 
     <rdf:Description rdf:about="&Person;Sara">

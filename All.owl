@@ -112,6 +112,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FamilyClass -->
+
+    <rdf:Description rdf:about="&PR;FamilyClass">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Common;medicalTest"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Common;policeCheck"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#PhDStudentGraduatedInCanada -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#PhDStudentGraduatedInCanada">
