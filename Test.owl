@@ -77,6 +77,47 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#B1SpeakingListening -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#B1SpeakingListening">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#TEF"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#listeningScore"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;double">145.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#speakingScore"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;double">181.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#LanguageTest"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#B2SpeakingListening -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#B2SpeakingListening">
@@ -91,7 +132,7 @@
                                 <owl:onDatatype rdf:resource="&xsd;decimal"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="&xsd;double">270.0</xsd:minInclusive>
+                                        <xsd:minInclusive rdf:datatype="&xsd;double">217.0</xsd:minInclusive>
                                     </rdf:Description>
                                 </owl:withRestrictions>
                             </rdfs:Datatype>
@@ -104,7 +145,7 @@
                                 <owl:onDatatype rdf:resource="&xsd;decimal"/>
                                 <owl:withRestrictions rdf:parseType="Collection">
                                     <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="&xsd;double">270.0</xsd:minInclusive>
+                                        <xsd:minInclusive rdf:datatype="&xsd;double">271.0</xsd:minInclusive>
                                     </rdf:Description>
                                 </owl:withRestrictions>
                             </rdfs:Datatype>
@@ -114,6 +155,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#LanguageTest"/>
+        <rdfs:comment>http://www.canadavisa.com/proving-french-language-ability-tef.html</rdfs:comment>
     </owl:Class>
     
 
@@ -121,6 +163,88 @@
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CELPIP -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CELPIP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#LanguageTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CLB4ListeningSpeaking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CLB4ListeningSpeaking">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#B1SpeakingListening"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#TEF"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CELPIP"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#listeningScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">2.0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#speakingScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">2.0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#IELTS"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#listeningScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">4.5</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#speakingScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">4.0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#LanguageTest"/>
     </owl:Class>
     
@@ -272,6 +396,12 @@
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CLB5ListeningSpeaking"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#TEF"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#IELTS"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#listeningScore"/>
@@ -294,37 +424,6 @@
                                         <owl:withRestrictions rdf:parseType="Collection">
                                             <rdf:Description>
                                                 <xsd:minInclusive rdf:datatype="&xsd;double">5.0</xsd:minInclusive>
-                                            </rdf:Description>
-                                        </owl:withRestrictions>
-                                    </rdfs:Datatype>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#TEF"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#listeningScore"/>
-                                <owl:someValuesFrom>
-                                    <rdfs:Datatype>
-                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
-                                        <owl:withRestrictions rdf:parseType="Collection">
-                                            <rdf:Description>
-                                                <xsd:minInclusive rdf:datatype="&xsd;double">180.0</xsd:minInclusive>
-                                            </rdf:Description>
-                                        </owl:withRestrictions>
-                                    </rdfs:Datatype>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#speakingScore"/>
-                                <owl:someValuesFrom>
-                                    <rdfs:Datatype>
-                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
-                                        <owl:withRestrictions rdf:parseType="Collection">
-                                            <rdf:Description>
-                                                <xsd:minInclusive rdf:datatype="&xsd;double">225.0</xsd:minInclusive>
                                             </rdf:Description>
                                         </owl:withRestrictions>
                                     </rdfs:Datatype>

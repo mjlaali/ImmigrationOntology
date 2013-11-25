@@ -20,6 +20,7 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR">
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/StudyPermit"/>
     </owl:Ontology>
     
 
@@ -136,6 +137,73 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#B2SpeakingListening"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>As a foreign student, Québec graduate or temporary worker in Québec, you can apply for a CSQ in the skilled worker class. However, you must be age 18 or older and, if you are presently studying, you must intend to enter the Québec labour market in the short term.
+http://www.immigration-quebec.gouv.qc.ca/EN/IMMIGRATE-SETTLE/students/stay-quebec/application-csq/index.html</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#DependentChilderen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#DependentChilderen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Single"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasAge"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">22</xsd:maxInclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#Student"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasAge"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minExclusive rdf:datatype="&xsd;integer">22</xsd:minExclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#hasParent"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#Citizen"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FamilyClass"/>
     </owl:Class>
     
 
@@ -143,6 +211,15 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EconomicImmigrants -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EconomicImmigrants">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#CICForQuebec"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FST"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FSW"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR"/>
     </owl:Class>
     
@@ -325,7 +402,24 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FamilyClass -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FamilyClass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#DependentChilderen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#MarriageClass"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR"/>
+        <rdfs:comment>Effective October 25, 2012, sponsored spouses or partners must now live together in a legitimate relationship with their sponsor for two years from the day they receive permanent residence status in Canada.
+
+If you are a spouse or partner being sponsored to come to Canada, this applies to you if:
+
+You are being sponsored by a permanent resident or Canadian citizen
+You have been in a relationship for two years or less with your sponsor
+You have no children in common
+Your application was received on or after October 25, 2012
+http://www.cic.gc.ca/english/immigrate/sponsor/index.asp</rdfs:comment>
     </owl:Class>
     
 
@@ -333,6 +427,25 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#MarriageClass -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#MarriageClass">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Healthy"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NonCriminal"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#isMarriedTo"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#Citizen"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FamilyClass"/>
     </owl:Class>
     
@@ -380,6 +493,8 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#CSQ"/>
+        <rdfs:comment>This program is aimed at you if you have obtained an eligible Québec diploma, or you are in the process of doing so, and you have a knowledge of oral French.
+http://www.immigration-quebec.gouv.qc.ca/EN/IMMIGRATE-SETTLE/students/stay-quebec/application-csq/students-peq/index.html</rdfs:comment>
     </owl:Class>
     
 
@@ -387,6 +502,16 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#PR">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#EconomicImmigrants"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#FamilyClass"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#OtherPR"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#Refugees"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status"/>
     </owl:Class>
     
@@ -459,6 +584,8 @@ http://www.cic.gc.ca/english/immigrate/skilled/index.asp</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#CSQ"/>
+        <rdfs:comment>The regular program is aimed at you if you are pursuing or have successfully completed a study program in Québec.
+http://www.immigration-quebec.gouv.qc.ca/EN/IMMIGRATE-SETTLE/students/stay-quebec/application-csq/students-quebec/index.html</rdfs:comment>
     </owl:Class>
     
 
