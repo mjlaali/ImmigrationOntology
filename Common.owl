@@ -99,14 +99,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Clearance -->
-
-    <owl:Class rdf:about="&Common;Clearance">
-        <rdfs:subClassOf rdf:resource="&Common;QualifiedPerson"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Criminal -->
 
     <owl:Class rdf:about="&Common;Criminal">
@@ -118,14 +110,6 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&Person;Person"/>
         <owl:disjointWith rdf:resource="&Common;NonCriminal"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#HaveOffer -->
-
-    <owl:Class rdf:about="&Common;HaveOffer">
-        <rdfs:subClassOf rdf:resource="&Common;QualifiedPerson"/>
     </owl:Class>
     
 
@@ -160,14 +144,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LivinExpenses -->
-
-    <owl:Class rdf:about="&Common;LivinExpenses">
-        <rdfs:subClassOf rdf:resource="&Common;QualifiedForFinance"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#NonCriminal -->
 
     <owl:Class rdf:about="&Common;NonCriminal">
@@ -182,22 +158,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance -->
-
-    <owl:Class rdf:about="&Common;QualifiedForFinance">
-        <rdfs:subClassOf rdf:resource="&Common;QualifiedPerson"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedPerson -->
-
-    <owl:Class rdf:about="&Common;QualifiedPerson">
-        <rdfs:subClassOf rdf:resource="&Person;Person"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Status -->
 
     <owl:Class rdf:about="&Common;Status">
@@ -206,27 +166,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#TuitionFee -->
-
-    <owl:Class rdf:about="&Common;TuitionFee">
-        <rdfs:subClassOf rdf:resource="&Common;QualifiedForFinance"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Adult -->
 
-    <owl:Class rdf:about="&Person;Adult">
-        <rdfs:subClassOf rdf:resource="&Person;Person"/>
-    </owl:Class>
+    <owl:Class rdf:about="&Person;Adult"/>
     
 
 
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Child -->
 
-    <owl:Class rdf:about="&Person;Child">
-        <rdfs:subClassOf rdf:resource="&Person;Person"/>
-    </owl:Class>
+    <owl:Class rdf:about="&Person;Child"/>
     
 
 
@@ -300,6 +248,15 @@
         <rdf:type rdf:resource="&Person;Living"/>
         <Person:locatedIn rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#Iran"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Joey -->
+
+    <rdf:Description rdf:about="&Person;Joey">
+        <Common:policeCheck rdf:datatype="&xsd;boolean">true</Common:policeCheck>
+        <Common:medicalTest rdf:datatype="&xsd;boolean">true</Common:medicalTest>
+    </rdf:Description>
     
 
 

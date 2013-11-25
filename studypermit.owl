@@ -74,27 +74,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#HaveOffer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#HaveOffer"/>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Healthy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#Healthy"/>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LivinExpenses -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LivinExpenses"/>
-    
-
-
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#QualifiedForFinance"/>
     
 
 
@@ -178,30 +160,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Person#Person"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#LessThanSixMonthsOffer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#LessThanSixMonthsOffer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#HaveOffer"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#LivingExpensesStudy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#LivingExpensesStudy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LivinExpenses"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#LivingExpensesVisit -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#LivingExpensesVisit">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#LivinExpenses"/>
     </owl:Class>
     
 

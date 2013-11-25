@@ -82,12 +82,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#CLB4ReadingWriting -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#CLB4ReadingWriting"/>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#CICForQuebec -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/PR#CICForQuebec">
@@ -206,7 +200,7 @@ http://www.cic.gc.ca/english/immigrate/quebec/apply-who.asp</rdfs:comment>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#tookATest"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#CLB4ReadingWriting"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Test#CLB4ReadingWriting"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#tookATest"/>
