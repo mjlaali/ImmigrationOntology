@@ -38,11 +38,244 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/Common#tookATest -->
+
+    <rdf:Description rdf:about="&Common;tookATest">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#BelowCLB7 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#BelowCLB7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Test;CELPIP"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;listeningScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxExclusive rdf:datatype="&xsd;double">4.0</xsd:maxExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;speakingScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxExclusive rdf:datatype="&xsd;double">4.0</xsd:maxExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Test;IELTS"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;listeningScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxExclusive rdf:datatype="&xsd;double">6.0</xsd:maxExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;speakingScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxExclusive rdf:datatype="&xsd;double">6.0</xsd:maxExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Test;TEF"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;listeningScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxExclusive rdf:datatype="&xsd;double">248.0</xsd:maxExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;speakingScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxExclusive rdf:datatype="&xsd;double">309.0</xsd:maxExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Test;LanguageTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#CLB7ListeningSpeaking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#CLB7ListeningSpeaking">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Test;CELPIP"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;listeningScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">4.0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;speakingScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">4.0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Test;IELTS"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;listeningScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">6.0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;speakingScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">6.0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Test;TEF"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;listeningScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">248.0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Test;speakingScore"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="&xsd;double">309.0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Test;LanguageTest"/>
+    </owl:Class>
     
 
 
@@ -316,12 +549,120 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#B2TEST -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#B2TEST">
+        <rdf:type rdf:resource="&Test;TEF"/>
+        <Test:listeningScore rdf:datatype="&xsd;decimal">280.0</Test:listeningScore>
+        <Test:speakingScore rdf:datatype="&xsd;decimal">280.0</Test:speakingScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Bob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Bob">
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Common;NonCriminal"/>
+                    <rdf:Description rdf:about="&PR;PR"/>
+                    <rdf:Description rdf:about="&Person;Adult"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Person;didActivity"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&Person;Living"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&Person;locatedIn"/>
+                                        <owl:hasValue rdf:resource="&Person;Canada"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&Person;activityLength"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minInclusive rdf:datatype="&xsd;integer">730</xsd:minInclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <Common:tookATest rdf:resource="&Test;CELPIPLevel5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Brad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Brad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDStudentGraduatedInQuebec"/>
+        <Common:policeCheck rdf:datatype="&xsd;boolean">true</Common:policeCheck>
+        <Common:tookATest rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#B2TEST"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering">
         <rdf:type rdf:resource="&Activity;Working"/>
         <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">450</Person:activityLength>
         <Activity:hasSkillLevel rdf:datatype="&xsd;string">A</Activity:hasSkillLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Kate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Kate">
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Common;NonCriminal"/>
+                    <rdf:Description rdf:about="&PR;PR"/>
+                    <rdf:Description rdf:about="&Person;Adult"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&Person;didActivity"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&Person;Living"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&Person;locatedIn"/>
+                                        <owl:hasValue rdf:resource="&Person;Canada"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&Person;activityLength"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minInclusive rdf:datatype="&xsd;integer">730</xsd:minInclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <Common:tookATest rdf:resource="&Common;IELTSTest7777"/>
     </owl:NamedIndividual>
     
 
@@ -370,6 +711,25 @@
         <Test:writingScore rdf:datatype="&xsd;decimal">260</Test:writingScore>
         <Test:speakingScore rdf:datatype="&xsd;decimal">310</Test:speakingScore>
         <Test:readingScore rdf:datatype="&xsd;decimal">310</Test:readingScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TemporaryStudyInConcordia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TemporaryStudyInConcordia">
+        <rdf:type rdf:resource="&Activity;Studying"/>
+        <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">120</Person:activityLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Vincent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Vincent">
+        <rdf:type rdf:resource="&Person;Person"/>
+        <Activity:doActivity rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TemporaryStudyInConcordia"/>
+        <Person:citizenOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#German"/>
     </owl:NamedIndividual>
     
 
