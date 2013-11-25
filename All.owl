@@ -330,57 +330,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#DependantChilderen -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#DependantChilderen">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&Person;Single"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&Person;hasAge"/>
-                                        <owl:someValuesFrom>
-                                            <rdfs:Datatype>
-                                                <owl:onDatatype rdf:resource="&xsd;nonNegativeInteger"/>
-                                                <owl:withRestrictions rdf:parseType="Collection">
-                                                    <rdf:Description>
-                                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">22</xsd:maxInclusive>
-                                                    </rdf:Description>
-                                                </owl:withRestrictions>
-                                            </rdfs:Datatype>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&Activity;doActivity"/>
-                                <owl:someValuesFrom rdf:resource="&Activity;Studying"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&Person;hasParent"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#Citizen"/>
-                                    <rdf:Description rdf:about="&PR;PR"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&PR;FamilyClass"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDStudentGraduatedInQuebec -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDStudentGraduatedInQuebec">
@@ -507,12 +456,45 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#15000d -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#15000d">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#MoneyForLiving"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#30000d -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#30000d">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#MoneyForLiving"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#MoneyForLivingAndStudying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Australia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Australia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#B2TEST -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#B2TEST">
         <rdf:type rdf:resource="&Test;TEF"/>
         <Test:listeningScore rdf:datatype="&xsd;decimal">280.0</Test:listeningScore>
         <Test:speakingScore rdf:datatype="&xsd;decimal">280.0</Test:speakingScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#BachelorInConcordia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#BachelorInConcordia">
+        <rdf:type rdf:resource="&Activity;Bachelor"/>
     </owl:NamedIndividual>
     
 
@@ -571,12 +553,116 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Bruce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Bruce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#CanadaStudent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Cindy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Cindy">
+        <rdf:type rdf:resource="&PR;CSQ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Colin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Colin">
+        <rdf:type rdf:resource="&PR;CICForQuebec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Cuba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Cuba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#David -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#David">
+        <rdf:type rdf:resource="&PR;PEQ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#England -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#England">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Frank -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Frank">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#AdultCitizen"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GeneralEngineering">
         <rdf:type rdf:resource="&Activity;Working"/>
         <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">450</Person:activityLength>
         <Activity:hasSkillLevel rdf:datatype="&xsd;string">A</Activity:hasSkillLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GoodWorkExp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#GoodWorkExp">
+        <rdf:type rdf:resource="&PR;ValidWorkExperienceForFSW"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Howard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Howard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#Student"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Jane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Jane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#TemporaryVisit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Japan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Jimmy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Jimmy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Citizenship#ChildCitizen"/>
     </owl:NamedIndividual>
     
 
@@ -625,6 +711,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Korea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Korea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Li -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Li">
@@ -634,6 +728,22 @@
         <Person:didActivity rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia"/>
         <Common:tookATest rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TEFLevel7"/>
         <Person:citizenOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#China"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Lily -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Lily">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#Visa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Lincoln -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Lincoln">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#CanadaStudent"/>
     </owl:NamedIndividual>
     
 
@@ -651,12 +761,108 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Mark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Mark">
+        <rdf:type rdf:resource="&PR;PR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#MasterInConcordiaUniversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#MasterInConcordiaUniversity">
+        <rdf:type rdf:resource="&Activity;Master"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Mexico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Mexico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Murder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Murder">
+        <rdf:type rdf:resource="&Activity;Crime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedB1SpeakingListening -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedB1SpeakingListening">
+        <rdf:type rdf:resource="&Test;B1SpeakingListening"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedB2SpeakingListening -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedB2SpeakingListening">
+        <rdf:type rdf:resource="&Test;B2SpeakingListening"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedCLB4LS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedCLB4LS">
+        <rdf:type rdf:resource="&Test;CLB4ListeningSpeaking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedCLB4RW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedCLB4RW">
+        <rdf:type rdf:resource="&Test;CLB4ReadingWriting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedCLB5LS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedCLB5LS">
+        <rdf:type rdf:resource="&Test;CLB5ListeningSpeaking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedCLB7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedCLB7">
+        <rdf:type rdf:resource="&Test;CLB7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedCLB7LS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PassedCLB7LS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#CLB7ListeningSpeaking"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#PhDInConcordia">
         <rdf:type rdf:resource="&Activity;Studying"/>
         <Person:activityLength rdf:datatype="&xsd;nonNegativeInteger">400</Person:activityLength>
         <Activity:hasSkillLevel rdf:datatype="&xsd;string">PhD</Activity:hasSkillLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Sam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Sam">
+        <rdf:type rdf:resource="&Person;Adult"/>
     </owl:NamedIndividual>
     
 
@@ -682,12 +888,60 @@
     
 
 
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Thailand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Thailand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Thomas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Thomas">
+        <rdf:type rdf:resource="&Person;Single"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#USA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#USA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#OutsideCanada"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Vincent -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Vincent">
         <rdf:type rdf:resource="&Person;Person"/>
         <Activity:doActivity rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#TemporaryStudyInConcordia"/>
         <Person:citizenOf rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#German"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Xing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Xing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xingwu/ontologies/2013/10/studypermit#StudyPermit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Yale_University -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#Yale_University">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/Country#University"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#underCLB7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#underCLB7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mjlaali/ontologies/2013/10/All#BelowCLB7"/>
     </owl:NamedIndividual>
     
 
